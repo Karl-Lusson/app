@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">fr.lusson.xml.lecture</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Text1">Le logiciel permet la lecture de fichier XML</string>
+    <string name="Parcourir">Charger</string>
+    <string name="AucunFichier">Aucun Fichier</string>
+    <string name="Nav">Nav</string>
+    <!-- <string name="CheminNav">/storage/sdcard0/Download/Memoy-Map/nav.gpx</string>  -->
+    <string name="CheminNav">/mnt/sdcard/Download/Memoy-Map/nav.gpx</string>
+    <string name="Sc">Sc</string>
+    <!-- <string name="CheminSc">/storage/sdcard0/Download/Memoy-Map/sc.gpx</string> -->
+    <string name="CheminSc">/mnt/sdcard/Download/Memoy-Map/sc.gpx</string>
+</resources>

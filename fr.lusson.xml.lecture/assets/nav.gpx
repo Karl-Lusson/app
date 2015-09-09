@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gpx version="1.1" 
+creator="Memory-Map 5.4.4.1113 http://www.memory-map.com"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.topografix.com/GPX/1/1"
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<rte>
+<name>NAV</name>
+<type>Route</type>
+<extensions> <line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>0000ff</color>
+<opacity>1.0</opacity>
+<width>2.0</width>
+<pattern>Solid</pattern>
+</line></extensions>
+<rtept lat="47.5590908938" lon="-0.3192127169">
+<name>TOF</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.5731347622" lon="-0.4339064562">
+<name>TP0</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.5885220613" lon="-0.4229067115">
+<name>SP</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7441442876" lon="-0.3234826828">
+<name>TP1</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8567863306" lon="-0.5295788008">
+<name>TP2</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.9049363433" lon="-0.8122352523">
+<name>TP3</name>
+<sym>Flag</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7209721949" lon="-0.7768666119">
+<name>TP4</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6558447494" lon="-0.8041030237">
+<name>TP5</name>
+<sym>Flag</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6312996442" lon="-0.5669497039">
+<name>FP</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+</rte>
+</gpx>

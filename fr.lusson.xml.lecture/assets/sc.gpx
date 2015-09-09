@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gpx version="1.1" 
+creator="Memory-Map 5.4.4.1113 http://www.memory-map.com"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.topografix.com/GPX/1/1"
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<rte>
+<name>SC5</name>
+<type>Route</type>
+<extensions> <line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>0000ff</color>
+<opacity>1.0</opacity>
+<width>2.0</width>
+<pattern>Solid</pattern>
+</line></extensions>
+<rtept lat="47.6558447494" lon="-0.8041030237">
+<name>TP5</name>
+<sym>Flag</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6540391525" lon="-0.7864696995">
+<name>WP0602</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6515066228" lon="-0.7617332261">
+<name>WP0603</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6463916650" lon="-0.7136086363">
+<name>WP0604</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6444586052" lon="-0.6916050100">
+<name>WP0605</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6412848431" lon="-0.6644794939">
+<name>WP0606</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6376985303" lon="-0.6265551465">
+<name>WP0607</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6327095860" lon="-0.5804726422">
+<name>WP0608</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+</rte>
+<rte>
+<name>SC4</name>
+<type>Route</type>
+<extensions> <line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>0000ff</color>
+<opacity>1.0</opacity>
+<width>2.0</width>
+<pattern>Solid</pattern>
+</line></extensions>
+<rtept lat="47.7209721949" lon="-0.7768666119">
+<name>TP4</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7061931515" lon="-0.7835051830">
+<name>WP0502</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7004199360" lon="-0.7858587839">
+<name>WP0503</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6881801543" lon="-0.7908601240">
+<name>WP0504</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6713158112" lon="-0.7979415478">
+<name>WP0505</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+</rte>
+<rte>
+<name>SC3</name>
+<type>Route</type>
+<extensions> <line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>0000ff</color>
+<opacity>1.0</opacity>
+<width>2.0</width>
+<pattern>Solid</pattern>
+</line></extensions>
+<rtept lat="47.9049363433" lon="-0.8122352523">
+<name>TP3</name>
+<sym>Flag</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8863821330" lon="-0.8088712144">
+<name>WP0402</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8700310561" lon="-0.8055084063">
+<name>WP0403</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8411763890" lon="-0.8000399068">
+<name>WP0404</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8139075764" lon="-0.7950146633">
+<name>WP0405</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7902859970" lon="-0.7902165511">
+<name>WP0406</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7768788603" lon="-0.7877243776">
+<name>WP0407</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7543871954" lon="-0.7833413201">
+<name>WP0408</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7448376729" lon="-0.7817591750">
+<name>WP0409</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+</rte>
+<rte>
+<name>SC2</name>
+<type>Route</type>
+<extensions> <line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>0000ff</color>
+<opacity>1.0</opacity>
+<width>2.0</width>
+<pattern>Solid</pattern>
+</line></extensions>
+<rtept lat="47.8567863306" lon="-0.5295788008">
+<name>TP2</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8634872475" lon="-0.5665686188">
+<name>WP0302</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8726030314" lon="-0.6212318098">
+<name>WP0303</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8813444625" lon="-0.6718278799">
+<name>WP0304</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8833339036" lon="-0.6831138214">
+<name>WP0305</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8896718253" lon="-0.7200447925">
+<name>WP0306</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8942080677" lon="-0.7470582331">
+<name>WP0307</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.9004997100" lon="-0.7850159700">
+<name>WP0308</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+</rte>
+<rte>
+<name>SC1</name>
+<type>Route</type>
+<extensions> <line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>0000ff</color>
+<opacity>1.0</opacity>
+<width>2.0</width>
+<pattern>Solid</pattern>
+</line></extensions>
+<rtept lat="47.7441442876" lon="-0.3234826828">
+<name>TP1</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7595646887" lon="-0.3517334739">
+<name>WP0202</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7867098046" lon="-0.4011126882">
+<name>WP0203</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8020262139" lon="-0.4289561755">
+<name>WP0204</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8302307639" lon="-0.4805038793">
+<name>WP0205</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8396218519" lon="-0.4979242363">
+<name>WP0206</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.8501003931" lon="-0.5174406342">
+<name>WP0207</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+</rte>
+<rte>
+<name>SC0</name>
+<type>Route</type>
+<extensions> <line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>0000ff</color>
+<opacity>1.0</opacity>
+<width>2.0</width>
+<pattern>Solid</pattern>
+</line></extensions>
+<rtept lat="47.5885220613" lon="-0.4229067115">
+<name>SP</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6109050176" lon="-0.4092304331">
+<name>WP0102</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6401274886" lon="-0.3905168498">
+<name>WP0103</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6468543982" lon="-0.3861426052">
+<name>WP0104</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6649414187" lon="-0.3745924037">
+<name>WP0105</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.6967149425" lon="-0.3539450283">
+<name>WP0106</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+<rtept lat="47.7284691021" lon="-0.3339478058">
+<name>WP0107</name>
+<sym>Tiny dot</sym>
+<type>Waypoints</type>
+</rtept>
+</rte>
+</gpx>

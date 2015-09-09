@@ -1,0 +1,67 @@
+package com.example.fr.lusson.vol;
+
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.graphics.Typeface;
+import android.view.Menu;
+import android.widget.TextView;
+
+public class VolPresentationActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_vol_presentation);
+		Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Comic_Sans_MS_Bold.ttf");
+		TextView texteView = (TextView) findViewById(R.id.textViewHpt);
+		texteView.setTypeface(font);
+		texteView = (TextView) findViewById(R.id.textViewPrefixHgps);
+		texteView.setTypeface(font);
+		texteView = (TextView) findViewById(R.id.textViewcheckBoxVTH);
+		texteView.setTypeface(font);
+		texteView = (TextView) findViewById(R.id.textViewcheckBoxVP);
+		texteView.setTypeface(font);
+		texteView = (TextView) findViewById(R.id.textViewcheckBoxLogger);
+		texteView.setTypeface(font);
+		texteView = (TextView) findViewById(R.id.textViewcheckBoxX5);
+		texteView.setTypeface(font);
+		texteView = (TextView) findViewById(R.id.textcheckBoxChrono);
+		texteView.setTypeface(font);
+		texteView = (TextView) findViewById(R.id.textViewPrefixePT);
+		texteView.setTypeface(font);
+
+		
+		
+		textViewPT
+		textViewPts
+		textViewRw_WKT
+		textViewPtsPrefix
+		textViewPT
+		textViewPts
+		
+		textViewRw_WKT
+		textViewPtsPrefix*
+		textViewHgps
+		textViewRv
+		textViewHsc
+		textViewCapVitesse
+		textViewVentCapVitesse
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.vol_presentation, menu);
+		return true;
+		
+	}
+
+}

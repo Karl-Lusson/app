@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bousole Vue</string>
+    <string name="action_settings">Settings</string>
+    <string name="Altitude">Altitude :</string>
+  	<string name="Chrono">Chrono :</string>
+  	<string name="Cap">Cap :</string>
+  	<string name="EcartLateral">Ecart Lateral :</string>
+  	<string name="Route">Route :</string>
+  	<string name="stAltitude">1</string>
+  	<string name="stChrono">2</string>
+  	<string name="stCap">3</string>
+  	<string name="stEcartLateral">4</string>
+  	<string name="stRoute">5</string>
+</resources>

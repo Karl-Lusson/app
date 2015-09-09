@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".OuSuisJeActivity" >
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/Latitude" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView01"
+        android:text="@string/Longitude" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/textView1"
+        android:text="@string/Altitude" />
+    
+	<!-- android:id permet le controle depuis l'activité  -->
+
+   
+    <TextView
+        android:id="@+id/AltitudeV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LongitudeV"
+        android:layout_below="@+id/LongitudeV"
+        android:text="@string/AltitudeV" />
+
+    <TextView
+        android:id="@+id/LongitudeV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LatitudeV"
+        android:layout_below="@+id/LatitudeV"
+        android:text="@string/LongitudeV" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/AltitudeV"
+        android:text="@string/Date" />
+
+    <TextView
+        android:id="@+id/DateV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AltitudeV"
+        android:layout_below="@+id/AltitudeV"
+        android:text="@string/DateV" />
+
+    <TextView
+        android:id="@+id/AzimutV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView03"
+        android:layout_alignBottom="@+id/TextView03"
+        android:layout_alignLeft="@+id/DateV"
+        android:text="@string/AzimutV" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView03"
+        android:layout_below="@+id/TextView03"
+        android:text="@string/Tangage" />
+
+    <TextView
+        android:id="@+id/TangageV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView04"
+        android:layout_alignBottom="@+id/TextView04"
+        android:layout_alignLeft="@+id/AzimutV"
+        android:text="@string/TangageV" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView04"
+        android:layout_below="@+id/TextView04"
+        android:text="@string/Roulis" />
+
+    <TextView
+        android:id="@+id/RoulisV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TangageV"
+        android:layout_below="@+id/TangageV"
+        android:text="@string/RoulisV" />
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView05"
+        android:layout_below="@+id/TextView05"
+        android:layout_marginTop="25dp"
+        android:text="@string/AcceLaterale" />
+
+    <TextView
+        android:id="@+id/AcceLateraleV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView06"
+        android:layout_alignBottom="@+id/TextView06"
+        android:layout_alignLeft="@+id/RoulisV"
+        android:text="@string/AcceLateraleV" />
+
+    <TextView
+        android:id="@+id/AcceLongitudinaleV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView07"
+        android:layout_alignBottom="@+id/TextView07"
+        android:layout_alignLeft="@+id/AcceLateraleV"
+        android:text="@string/AcceLongitudinaleV" />
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView06"
+        android:layout_below="@+id/TextView06"
+        android:text="@string/AcceLongitudinale" />
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView07"
+        android:layout_below="@+id/TextView07"
+        android:text="@string/AcceVerticale" />
+
+    <TextView
+        android:id="@+id/AcceVerticale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AcceLongitudinaleV"
+        android:layout_below="@+id/AcceLongitudinaleV"
+        android:text="@string/AcceVerticaleV" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView02"
+        android:layout_below="@+id/TextView02"
+        android:layout_marginTop="57dp"
+        android:text="@string/Azimut" />
+
+    <TextView
+        android:id="@+id/CapV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DateV"
+        android:layout_below="@+id/DateV"
+        android:text="@string/CapV" />
+
+    <TextView
+        android:id="@+id/VitesseV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/CapV"
+        android:layout_below="@+id/CapV"
+        android:text="@string/VitesseV" />
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView02"
+        android:layout_below="@+id/TextView02"
+        android:text="@string/Cap" />
+
+    <TextView
+        android:id="@+id/TextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView09"
+        android:layout_below="@+id/TextView09"
+        android:text="@string/Vitesse" />
+
+    <TextView
+        android:id="@+id/LatitudeV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_marginLeft="42dp"
+        android:layout_toRightOf="@+id/TextView07"
+        android:text="@string/LatitudeV" />
+
+</RelativeLayout>

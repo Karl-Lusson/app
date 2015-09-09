@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Partie vue bousole --> 
+    <color name="background_color">#F333</color>
+    <color name="marker_color">#AFFF</color>
+    <color name="text_color">#AFFF</color>
+    <color name="textinv_color">#A000</color>
+    <color name="Altitude_color">#AA0093DD</color>
+    <!-- Partie vue bousole #AA0093DD --> 
+    <color name="Chrono_color">#AFF0</color>
+    <color name="DeriveCap_color">#AF0F</color>
+    <color name="Cap_color">#A0FF</color>
+    <color name="Altitude_Hors_color">#AA0093DD</color>
+    <color name="Chrono2Seconde_color">#A0F0</color>
+    <color name="Couronne_Color">#AFFF</color>
+    <color name="Contour_Color">#A000</color>
+    <color name="BousoleIntC1_Color">#AAEC9A94</color>
+    <color name="BousoleIntC2_Color">#AAF1BF94</color>
+    <color name="BousoleIntC3_Color">#AAA5D5B4</color>
+    <color name="BousoleEcrit_Color">#A000</color>
+    <color name="FondCheckBox_Color">#FFFF</color>
+    <color name="Rv_color">#AAA5D5B4</color>
+    <color name="Rw_WKT_color">#AAE77817</color>
+    <color name="CapVitesse_color">#AA0093DD</color>
+    <color name="PrefixHgps_color">#AFF0</color>    
+    	<!-- Fin Partie vue bousole -->    
+</resources>

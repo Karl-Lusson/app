@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">fr.lusson.vol</string>
+    <string name="sPrefixePT">PT</string>
+    <string name="sPrefixPTS">PTS : </string>
+    <string name="sPT">4</string>
+    <string name="sRv">173</string>
+    <string name="sHpt">17:32</string>
+    <string name="sHgps">14:58</string>
+    <string name="sPrefixHgps">17:</string>
+    <string name="sRw_WKT">184 74</string>
+    <string name="sHsc">15:17</string>
+    <string name="sPTS">2108</string>
+    <string name="sVentCapVitesse">197 06</string>
+    <string name="sCapVitesse">010 162</string>
+
+    <string name="SFont">comic_sans_ms</string>
+
+    <string name="sVth">Vth</string>
+    <string name="sVP">VP</string>
+    <string name="sLogger">Logger</string>
+    <string name="sSC">SC</string>
+    <string name="sX5">x 5</string>
+    <string name="sChrono">Chrono</string>
+    	
+	<!-- Partie vue bousole -->    
+    <string name="Altitude">Altitude :</string>
+ 	<string name="cardinal_north">N</string>
+	<string name="cardinal_east">E</string>
+  	<string name="cardinal_south">S</string>
+  	<string name="cardinal_west">W</string>
+  	<string name="Chrono">Chrono :</string>
+  	<string name="Cap">Cap :</string>
+  	<string name="EcartLateral">Ecart Lateral :</string>
+  	<string name="Route">Route :</string>
+  	<string name="stAltitude">1</string>
+  	<string name="stChrono">2</string>
+  	<string name="stCap">3</string>
+  	<string name="stEcartLateral">4</string>
+  	<string name="stRoute">5</string>
+	<!-- Fin Partie vue bousole -->    
+
+	<!-- Partie menu -->    
+    <string name="action_configuration">Configuration</string>
+ 
+    <string name="action_bousole">Bousole</string>
+    <string name="action_altitude">Altitude</string>
+  	<string name="action_chrono">Chrono</string>
+  	<string name="action_cap">Cap</string>
+  	<string name="action_ecart_lateral">Ecart Lateral</string>
+  	<string name="action_route">Route</string>
+
+    <string name="action_general">Génèral</string>
+
+    <string name="action_case_coche">Case à cocher</string>
+    		
+    <string name="action_valeur">Valeur</string>
+    <string name="action_PT">PT</string>
+    <string name="action_Rv">Rv</string>
+    <string name="action_Hpt">Hpt</string>
+    <string name="action_Hgps">Hgps</string>
+    <string name="action_PrefixHgps">PrefixHgps</string>
+    <string name="action_Rw">Rw</string>
+    <string name="action_WKT">WKT</string>
+    <string name="action_Hsc">Hsc</string>
+    <string name="action_PTS">PTS</string>
+    <string name="action_VentCap">Vent Cap</string>
+    <string name="action_VentVitesse">Vent Vitesse</string>
+    <string name="action_Cap">Cap</string>
+    <string name="action_Vitesse">Vitesse</string>
+ 
+	<string name="action_BousoleIntC1">Interieur 1</string>
+	<string name="action_BousoleIntC2">Interieur 2</string>
+	<string name="action_BousoleIntC3">Interieur 3</string>
+    	
+   	<!-- Fin Partie menu -->    
+
+	<!-- Partie Boite de dialogue de demande de nombre -->    
+    <string name="stDialogueDemande">Puis-je avoir l lément ?</string>
+    
+	<!-- Fin Partie Boite de dialogue de demande de nombre -->    
+
+</resources>

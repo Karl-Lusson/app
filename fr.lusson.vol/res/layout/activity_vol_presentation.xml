@@ -1,0 +1,306 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".VolPresentationActivity" >
+
+    <!-- Vue boussole   -->
+    
+    <TextView
+        android:id="@+id/textViewHpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sHpt"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <!--         android:layout_alignBaseline="@+id/textViewHgps"
+        android:layout_alignBottom="@+id/textViewHgps"
+     -->
+    
+    <TextView
+        android:id="@+id/textViewPrefixHgps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewHgps"
+        android:layout_toLeftOf="@+id/textViewHgps"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sPrefixHgps"
+        android:textColor="@color/PrefixHgps_color"
+        android:textSize="@dimen/TaillePetitePolice"
+        android:textStyle="bold" />
+
+    <!-- Debut case a Cocher-->
+    <!-- VTH-->
+
+    <CheckBox
+        android:id="@+id/checkBoxVTH"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_above="@+id/checkBoxVP"
+        android:layout_alignParentLeft="true"
+        android:button="@drawable/custom_checkbox_design"
+        android:fontFamily="@string/SFont" />
+
+    <TextView
+        android:id="@+id/textViewcheckBoxVTH"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/checkBoxVTH"
+        android:layout_toRightOf="@+id/checkBoxVTH"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sVth"
+        android:textColor="@color/text_color"
+  		android:button="@drawable/custom_checkbox_design"
+        android:textSize="@dimen/TaillePetitePolice" />
+    <!-- VP-->
+
+    <CheckBox
+        android:id="@+id/checkBoxVP"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_above="@+id/checkBoxLogger"
+        android:layout_alignParentLeft="true"
+        android:button="@drawable/custom_checkbox_design"
+        android:fontFamily="@string/SFont" />
+
+    <TextView
+        android:id="@+id/textViewcheckBoxVP"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/checkBoxVP"
+        android:layout_toRightOf="@+id/checkBoxVP"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sVP"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TaillePetitePolice" />
+    <!-- Logger-->
+    <CheckBox
+        android:id="@+id/checkBoxLogger"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_above="@+id/checkBoxSC"
+  		android:button="@drawable/custom_checkbox_design"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="@string/SFont"/>
+    <TextView
+        android:id="@+id/textViewcheckBoxLogger"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/checkBoxLogger"
+        android:layout_toRightOf="@+id/checkBoxLogger"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sLogger"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TaillePetitePolice" />
+    <!-- SC-->
+    <CheckBox
+        android:id="@+id/checkBoxSC"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_above="@+id/checkBoxX5"
+  		android:button="@drawable/custom_checkbox_design"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="@string/SFont"/>
+    <TextView
+        android:id="@+id/textViewcheckBoxSC"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/checkBoxSC"
+        android:layout_toRightOf="@+id/checkBoxSC"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sSC"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TaillePetitePolice" />
+    <!-- X5-->
+    <CheckBox
+        android:id="@+id/checkBoxX5"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_above="@+id/checkBoxChrono"
+  		android:button="@drawable/custom_checkbox_design"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="@string/SFont"/>
+    <TextView
+        android:id="@+id/textViewcheckBoxX5"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/checkBoxX5"
+        android:layout_toRightOf="@+id/checkBoxX5"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sX5"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TaillePetitePolice" />
+    <!-- Chrono-->
+    <CheckBox
+        android:id="@+id/checkBoxChrono"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+  		android:button="@drawable/custom_checkbox_design"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@string/SFont"/>
+     <TextView
+        android:id="@+id/textViewcheckBoxChrono"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/checkBoxChrono"
+        android:layout_toRightOf="@+id/checkBoxChrono"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sChrono"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TaillePetitePolice" />
+    <!-- Chrono-->
+    
+    <TextView
+        android:id="@+id/textViewPrefixePT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sPrefixePT"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TaillePetitePolice"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewPT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textViewPrefixePT"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sPT"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewPts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textViewPtsPrefix"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sPTS"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" 
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/textViewRw_WKT"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHgps"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/arrondi_textview"
+        android:fontFamily="@string/SFont"
+        android:gravity="center_horizontal"
+        android:text="@string/sRw_WKT"
+        android:textColor="@color/Rw_WKT_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewPtsPrefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sPrefixPTS"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <fr.lusson.bousole.vue.BousoleView
+        android:id="@+id/BoussoleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <!-- android:scaleX="0.70"
+        android:scaleY="0.70" -->
+
+    <TextView
+        android:id="@+id/textViewHgps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewRv"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sHgps"
+        android:textColor="@color/PrefixHgps_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewRv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sRv"
+        android:textColor="@color/Rv_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewHsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewHpt"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sHsc"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCapVitesse"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewVentCapVitesse"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/arrondi_textview"
+        android:fontFamily="@string/SFont"
+        android:gravity="center_horizontal"
+        android:text="@string/sCapVitesse"
+        android:textColor="@color/CapVitesse_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewVentCapVitesse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewPtsPrefix"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/SFont"
+        android:text="@string/sVentCapVitesse"
+        android:textColor="@color/Rw_WKT_color"
+        android:textSize="@dimen/TailleGrandePolice"
+        android:textStyle="bold" />
+
+</RelativeLayout>

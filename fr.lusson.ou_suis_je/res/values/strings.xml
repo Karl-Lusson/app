@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ou suis je?</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Latitude">Latitude :</string>
+    <string name="Longitude">Longitude :</string>
+    <string name="Altitude">Altitude :</string>
+    <string name="LatitudeV">Aucune Info</string>
+    <string name="LongitudeV">Aucune Info</string>
+    <string name="AltitudeV">Aucune Info</string>
+    <string name="Date">Date :</string>
+    <string name="DateV">Aucune Info</string>
+    <string name="Azimut">Azimut :</string>
+    <string name="AzimutV">Aucune Info</string>
+    <string name="Tangage">Tangage :</string>
+    <string name="TangageV">Aucune Info</string>
+    <string name="Roulis">Roulis :</string>
+    <string name="RoulisV">Aucune Info</string>
+    <string name="AcceLaterale">Accé. Latérale :</string>
+    <string name="AcceLateraleV">Aucune Info</string>
+    <string name="AcceLongitudinale">Accé. Longitudinale :</string>
+    <string name="AcceLongitudinaleV">Aucune Info</string>
+    <string name="AcceVerticale">Accé. Verticale :</string>
+    <string name="AcceVerticaleV">Aucune Info</string>
+    <string name="Cap">Cap :</string>
+    <string name="CapV">Aucune Info</string>
+    <string name="Vitesse">Vitesse :</string>
+    <string name="VitesseV">Aucune Info</string>
+
+</resources>

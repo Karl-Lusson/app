@@ -1,0 +1,617 @@
+/**
+ * 
+ */
+package fr.lusson.bousole.vue;
+
+ 
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.util.AttributeSet;
+import android.view.View;
+
+/**
+ * @author lutchi
+ *
+ */
+public class BousoleView extends View {
+
+	// Couleur de la couronne
+	private Paint CouronnePaint;
+	
+	// Couleur coutour des dessins
+	private Paint CoutourPaint;
+	
+	// Couleur Interieur de la bousole
+	private Paint BousoleIntC1Paint;
+	private Paint BousoleIntC2Paint;
+	private Paint BousoleIntC3Paint;
+
+	//Dimenssion texte
+	private int HauteurText = 36;
+	
+	//dessin de la boussole
+	private Paint markerPaint;
+	private Paint textPaint;
+	private Paint circlePaint;
+
+	// Ecriture de la bousole
+	private Paint BousoleEcritPaint;
+	
+
+	// ------ ALtitude
+	// Altitude couleur
+	private Paint altitudePaint;
+	private float fAltitude = 0;
+	// Altitude couleur hors limite altitude
+	private Paint altitudeHorsPaint;
+	// Permet de définir l'altitude mini
+	private float fAltitudeMini=800;
+	// Permet de définir l'altitude maxi
+	private float fAltitudeMaxi=1600;
+
+	// ------ Ecart Lateral
+	// Couleur Ecart Lateral
+	private Paint EcartLateralPaint;
+	private float fEcartLateral = 0;
+	// Permet de définir l'ecart Lateral mini
+	private float fEcartLateralMini=-926;
+	// Permet de définir l'ecart Lateral maxi
+	private float fEcartLateralMaxi=926;
+
+	// ------ Chrono
+	// Chrono couleur
+	private Paint ChronoPaint;
+	private Paint Chrono2SecondePaint;
+	private float fChrono = 0;
+	// Permet de définir le Chrono mini
+	private float fChronoMini=-23;
+	// Permet de définir le Chronos maxi
+	private float fChronoMaxi=23;
+
+
+	// cap couleur
+	private Paint CapPaint;
+	private float fCap = 0;
+	//Echelle
+
+	// permet de définir l'altitude
+	/**
+	 * @return the iAltitude
+	 */
+	public float getfAltitude() {
+		return fAltitude;
+	}
+	/**
+	 * @param iAltitude the iAltitude to set
+	 */
+	public void setfAltitude(float fAltitude) {
+		this.fAltitude = fAltitude;
+		this.invalidate();
+	}
+	/**
+	 * @param iDeriveTemps the iDeriveTemps to set
+	 */
+	public void setfChrono(float fChrono) {
+		this.fChrono = fChrono;
+		this.invalidate();
+	}
+	/**
+	 * @param iDeriveTemps the iEcartLateral to set
+	 */
+	public void setfEcartLateral(float f) {
+		this.fEcartLateral = f;
+		this.invalidate();
+	}
+	/**
+	 * @param iDeriveTemps the iDeriveTemps to set
+	 */
+	public void setfCap(float fCap) {
+		this.fCap = fCap;
+		this.invalidate();
+	}
+
+	// Le cap de la boussole
+	private float fRoute;
+	/**
+	 * @return the bearing
+	 */
+	public float getRoute() {
+		return fRoute;
+	}
+	/**
+	 * @param bearing the bearing to set
+	 */
+	public void setRoute(float fRoute) {
+		this.fRoute = fRoute;
+		//		sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED);
+		this.invalidate();
+	}
+
+
+	/**
+	 * @param context
+	 */
+	public BousoleView(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+		initBoussoleView();
+	}
+
+	/**
+	 * @param context
+	 * @param attrs
+	 */
+	public BousoleView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+		initBoussoleView();
+	}
+
+	/**
+	 * @param context
+	 * @param attrs
+	 * @param defStyle
+	 */
+	public BousoleView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+		// TODO Auto-generated constructor stub
+		initBoussoleView();
+	}
+
+	/**
+	 * 
+	 */
+	protected void initBoussoleView() {
+		setFocusable(true);
+
+		Resources r = this.getResources();
+
+		// Initialisation de la couleur de la couronne
+		CouronnePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		CouronnePaint.setColor(r.getColor(R.color.Couronne_Color));
+		//CouronnePaint.setAlpha(127);
+		//CouronnePaint.setStrokeWidth(1);// Taille du trait contour
+		CouronnePaint.setStyle(Paint.Style.FILL);// Remplissage de la forme
+		
+		// Initialisation de la couleur de la couronne
+		CoutourPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		CoutourPaint.setColor(r.getColor(R.color.Contour_Color));
+		CoutourPaint.setStrokeWidth(1);// Taille du trait contour		
+		CoutourPaint.setStyle(Paint.Style.STROKE);// Remplissage du bord
+
+		// Initialisation de la couleur de la couronne C1
+		BousoleIntC1Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		BousoleIntC1Paint.setColor(r.getColor(R.color.BousoleIntC1_Color));
+		BousoleIntC1Paint.setStrokeWidth(1);// Taille du trait contour		
+		BousoleIntC1Paint.setStyle(Paint.Style.FILL_AND_STROKE);// Remplissage du bord
+	
+		// Initialisation de la couleur de la couronne C2
+		BousoleIntC2Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		BousoleIntC2Paint.setColor(r.getColor(R.color.BousoleIntC2_Color));
+		BousoleIntC2Paint.setStrokeWidth(1);// Taille du trait contour		
+		BousoleIntC2Paint.setStyle(Paint.Style.FILL_AND_STROKE);// Remplissage du bord
+
+		// Initialisation de la couleur de la couronne C3
+		BousoleIntC3Paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		BousoleIntC3Paint.setColor(r.getColor(R.color.BousoleIntC3_Color));
+		BousoleIntC3Paint.setStrokeWidth(1);// Taille du trait contour		
+		BousoleIntC3Paint.setStyle(Paint.Style.FILL_AND_STROKE);// Remplissage du bord
+		
+		// Initialisation de la couleur de l'ecriture de la bousole
+		BousoleEcritPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		BousoleEcritPaint.setColor(r.getColor(R.color.BousoleEcrit_Color));
+		BousoleEcritPaint.setStrokeWidth(1);// Taille du trait contour		
+		BousoleEcritPaint.setStyle(Paint.Style.STROKE);// Remplissage du bord
+		BousoleEcritPaint.setTextSize(HauteurText);// Hauteur Text
+		//DimText = (int)BousoleEcritPaint.measureText("yY");
+
+		
+		
+		
+		
+		circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		circlePaint.setColor(r.getColor(R.color.background_color));
+		//circlePaint.setAlpha(127);
+		circlePaint.setStrokeWidth(1);
+		circlePaint.setStyle(Paint.Style.FILL_AND_STROKE);
+
+		textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		textPaint.setColor(r.getColor(R.color.text_color));
+		textPaint.setTextSize(18);
+
+		markerPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		markerPaint.setColor(r.getColor(R.color.marker_color));
+		// Définition de la couleur de l'altitude
+		altitudePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		altitudePaint.setColor(r.getColor(R.color.Altitude_color));
+		altitudePaint.setStrokeWidth(5);// Taille du trait
+		// Définition de la couleur hors limite de l'altitude
+		altitudeHorsPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		altitudeHorsPaint.setColor(r.getColor(R.color.Altitude_Hors_color));
+		altitudeHorsPaint.setStrokeWidth(5);// Taille du trait
+		//altitudePaint.setTextSize(150);
+		// Définition de la couleur de la derive du temps
+		ChronoPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		ChronoPaint.setColor(r.getColor(R.color.Chrono_color));
+		ChronoPaint.setStrokeWidth(5);// Taille du trait
+		Chrono2SecondePaint= new Paint(Paint.ANTI_ALIAS_FLAG);
+		Chrono2SecondePaint.setColor(r.getColor(R.color.Chrono2Seconde_color));
+		Chrono2SecondePaint.setStrokeWidth(2);
+		// Définition de la couleur de l'ecartLateral
+		EcartLateralPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		EcartLateralPaint.setColor(r.getColor(R.color.DeriveCap_color));
+		EcartLateralPaint.setStrokeWidth(5);// Taille du trait
+		// Définition de la couleur du cap
+		CapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		CapPaint.setColor(r.getColor(R.color.Cap_color));
+		CapPaint.setStrokeWidth(5);// Taille du trait
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see android.view.View#onMeasure(int, int)
+	 */
+	@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		// TODO Auto-generated method stub
+		//superpy.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+		// La boussole est un cercle remplissant le plus d'espace possible.
+		// Calcul des dimensions en fonction de la plus petite limite,
+		// hauteur ou largeur.
+		int measuredWidth = measure(widthMeasureSpec);
+		int measuredHeight = measure(heightMeasureSpec);
+
+		int d = Math.min(measuredWidth, measuredHeight); //Retourne l'élément minimum
+
+		setMeasuredDimension(d, d);
+	}
+
+	private int measure(int measureSpec) {
+		int result = 0; 
+
+		// Décode les mesures.
+		int specMode = MeasureSpec.getMode(measureSpec);
+		int specSize = MeasureSpec.getSize(measureSpec); 
+
+		if (specMode == MeasureSpec.UNSPECIFIED) {
+			// Renvoie une taille par défaut de 200 si aucune borne n'est spécifiée. 
+			result = 200;
+		} else {
+			// Si vous voulez )=^$*remplir tout l'espace
+			// renvoyez toujours toutes les bornes.
+			result = specSize;
+		} 
+		return result;
+	}
+	/* (non-Javadoc)
+	 * @see android.view.View#onDraw(android.graphics.Canvas)
+	 *
+	 *
+	 */
+	@Override
+	protected void onDraw(Canvas canvas) {
+		// TODO Auto-generated method stub
+		int px = (getMeasuredWidth() /2)-getMeasuredWidth()/25;
+		int py = getMeasuredHeight() /2 ;
+
+		int radius = Math.min(px, py)-getMeasuredWidth()/25;
+		// Dessine le fond
+		//Cercle de la Couronne
+		canvas.drawCircle(px, py, radius, CouronnePaint);
+
+		//Cercle du contour de la Couronne
+		canvas.drawCircle(px, py, radius, CoutourPaint);
+
+		// Calcul de la hauteur des caractére
+		//int iTextHauteur = (int)textPaint.measureText("W");
+
+		// calcul de la hauteur
+//		int iTextWidth = (int)BousoleEcritPaint.measureText("190");
+
+		// Ecart de l'accent sur la bague route
+		int iLongTrai = 9;
+
+		// Cercle interieur de la bousole
+//		canvas.drawCircle(px, py, radius-2*iLongTrai-iTextWidth, markerPaint);
+		canvas.drawCircle(px, py, radius-HauteurText-iLongTrai, BousoleIntC3Paint);		
+
+		// Fait tourner la perspective afin que le haut soit
+		// face à la direction de la route.iTextHauteur   HauteurText
+		BagueRoute(canvas,px,py,radius,HauteurText);
+
+		// Creation de la croix à l'interieur du cercle
+		// Horizontale
+		canvas.drawLine(px-radius+HauteurText+iLongTrai, py, px+radius-HauteurText-iLongTrai, py, BousoleEcritPaint);
+		// Verticale
+		canvas.drawLine(px, py-radius+HauteurText+iLongTrai, px, py+radius-HauteurText-iLongTrai, BousoleEcritPaint);
+
+		// Fonction du traçage d'altitude
+		TraitAltitude(canvas,px,py,radius);
+
+		// Dessin des trait d'ecart lateral
+		TraitEcartLateral(canvas,px,py,radius,HauteurText,iLongTrai);
+
+		// Dessin des trait de Chrono
+		TraitChrono(canvas,px,py,radius,HauteurText,iLongTrai);
+
+		// Calcul du cap celon l'orientation de la bague
+		float fCalculCap = 0;
+		fCalculCap = fCap-fRoute;
+		// verificatin du calcul non négatif du cap
+		if (fCalculCap<0)
+			fCalculCap=360+fCalculCap;
+ 		// Trais Cap
+		canvas.drawLine(px,py,(float) (px+((Math.sin(Math.toRadians(fCalculCap))*(radius-2*iLongTrai-HauteurText))))
+				,(float) (py-((Math.cos(Math.toRadians(fCalculCap))*(radius-2*iLongTrai-HauteurText)))),CapPaint);
+		//canvas.drawLine(px,py,px+180,py-180,deriveCapPaint);
+
+	}    
+	/**
+	 * Cette fonction permet le traçage de la bars d'altitude
+	 * @param canvas
+	 */
+	protected void TraitAltitude(Canvas canvas,int iPx,int iPy,int iRayon ) {
+		// traçage de l'altitude
+		// Traçage de la boite
+		canvas.drawRect(iPx+iRayon+getMeasuredWidth()/25, iPy-iRayon, getMeasuredWidth(), iPy+iRayon, CouronnePaint);
+		// Traçage contour de la boite
+		canvas.drawRect(iPx+iRayon+getMeasuredWidth()/25, iPy-iRayon, getMeasuredWidth(), iPy+iRayon, BousoleEcritPaint);
+
+		// Traçage du trait de 0
+		canvas.drawLine(iPx+iRayon+getMeasuredWidth()/25, iPy, getMeasuredWidth(),iPy, BousoleEcritPaint);
+
+		int iHauteurPixel=iRayon*2;
+		float fAmplitudeAltitude =fAltitudeMaxi-fAltitudeMini;
+		float fCoefEchelle =iHauteurPixel/fAmplitudeAltitude;
+		// boucle Petit trait de l'altitude du bas
+		int iCompteur=1;
+		float fPivotY=iPy+(100*fCoefEchelle);
+		while (fPivotY<iPy+iRayon) 
+		{
+			if (iCompteur%2!=0)
+			{
+				// trait court
+				canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)+12, fPivotY,
+						getMeasuredWidth()-12, fPivotY, BousoleEcritPaint);
+			}
+			else
+			{
+				// trait long
+				canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25), fPivotY,
+						getMeasuredWidth(), fPivotY, BousoleEcritPaint);
+			}
+			iCompteur++;
+			fPivotY= (int) (fPivotY+(100*fCoefEchelle));
+		}
+		// boucle Petit trais de l'altitude du haut
+		iCompteur = 1;
+		fPivotY=iPy-(100*fCoefEchelle);
+		while (fPivotY>iPy-iRayon) 
+		{
+			if (iCompteur%2!=0)
+			{
+				// trait court
+				canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)+12, fPivotY,
+						getMeasuredWidth()-12, fPivotY, BousoleEcritPaint);
+			}
+			else
+			{
+				// trait long
+				canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25), fPivotY,
+						getMeasuredWidth(), fPivotY, BousoleEcritPaint);
+			}
+			iCompteur++;
+			fPivotY= (int) (fPivotY-(100*fCoefEchelle));
+		}
+		// Trait d'altitude
+		if (fAltitude<fAltitudeMini)
+		{
+			// Altitude inferieur a Mini
+			canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)-12, 
+					iPy+iRayon-(getMeasuredWidth()/25), 
+					getMeasuredWidth(),
+					iPy+iRayon, 
+					altitudeHorsPaint);
+		}
+		else if (fAltitude>fAltitudeMaxi)
+		{
+			// Altitude superieur au maxi
+			canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)-12, 
+					iPy-iRayon+(getMeasuredWidth()/25), 
+					getMeasuredWidth(),
+					iPy-iRayon, 
+					altitudeHorsPaint);
+		}
+		else
+		{
+			// Trait de l'altitude
+			if (fAltitude==(fAltitudeMini+((fAltitudeMaxi-fAltitudeMini)/2)))
+			{
+				// Trait altitude point millieu
+				canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)-12,
+						iPy, 
+						getMeasuredWidth()+12,
+						iPy,
+						altitudePaint);
+			}
+			else if(fAltitude>(fAltitudeMini+((fAltitudeMaxi-fAltitudeMini)/2)))
+			{
+
+				// trait altitude superieur point milieu
+				canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)-12,
+						iPy-(fAltitude-((fAltitudeMaxi-fAltitudeMini)/2)-fAltitudeMini)*fCoefEchelle, 
+						getMeasuredWidth()+12,
+						iPy-(fAltitude-((fAltitudeMaxi-fAltitudeMini)/2)-fAltitudeMini)*fCoefEchelle,
+						altitudePaint);
+			}
+			else
+			{
+				// trait altitude superieur point milieu
+				canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)-12,
+						iPy+(((fAltitudeMaxi-fAltitudeMini)/2)+fAltitudeMini-fAltitude)*fCoefEchelle, 
+						getMeasuredWidth()+12,
+						iPy+(((fAltitudeMaxi-fAltitudeMini)/2)+fAltitudeMini-fAltitude)*fCoefEchelle,
+						altitudePaint);
+			}
+		}
+		//canvas.drawLine(iPx+iRayon+(getMeasuredWidth()/25)-12, iPy, 
+		//		getMeasuredWidth()+12,iPy, altitudePaint);
+	}
+	/**
+	 * Cette fonction permet le traçage de l'Ecart Lateral
+	 * @param canvas
+	 */
+	protected void TraitEcartLateral(Canvas canvas,int iPx,int iPy,int iRayon,
+			int iTextWidth,int iLongTrai) {
+		// Definition de la longueur d'amplitude d'affichage
+		int iLongEcartLateral=(iRayon-iTextWidth)*2;
+		// Definition de l'amplitude
+		float fAmplitudeEcartLateral =Math.abs(fEcartLateralMini)+fEcartLateralMaxi;
+		float fCoefEchelle =iLongEcartLateral/fAmplitudeEcartLateral;
+
+		// boucle des traits de droite de l'ecart lateral
+		int iCompteur=1;
+		float fPivotX=iPx+(300*fCoefEchelle);
+		while (fPivotX<iPx+iRayon-iTextWidth) 
+		{
+			if (iCompteur%2!=0)
+			{
+				// trait court
+				canvas.drawLine(fPivotX, iPy+6,fPivotX, iPy-6, BousoleEcritPaint);
+			}
+			else
+			{
+				// trait long
+				canvas.drawLine(fPivotX, iPy+12,fPivotX, iPy-12, BousoleEcritPaint);
+			}
+			iCompteur++;
+			fPivotX= (fPivotX+(300*fCoefEchelle));
+		}
+
+		// boucle des traits de gauche de l'ecart lateral
+		iCompteur = 1;
+		fPivotX=iPx-(300*fCoefEchelle);
+		while (fPivotX>iPx-iRayon-iTextWidth) 
+		{
+			if (iCompteur%2!=0)
+			{
+				// trait court
+				canvas.drawLine(fPivotX, iPy+6,fPivotX, iPy-6, BousoleEcritPaint);
+			}
+			else
+			{
+				// trait long
+				canvas.drawLine(fPivotX, iPy+12,fPivotX, iPy-12, BousoleEcritPaint);
+			}
+			iCompteur++;
+			fPivotX= (fPivotX-(300*fCoefEchelle));
+		}
+
+		// Trait de l'etat Ecart Lateral
+		fPivotX=(fEcartLateral*fCoefEchelle);
+		canvas.drawLine(iPx+fPivotX, 
+				(float) ((iPy+Math.sqrt(Math.pow(iRayon-iLongTrai-iTextWidth, 2)-Math.pow(fPivotX,2)))), 
+				iPx+fPivotX,
+				(float) ((iPy-Math.sqrt(Math.pow(iRayon-iLongTrai-iTextWidth, 2)-Math.pow(fPivotX,2)))), 
+				EcartLateralPaint);
+	}
+	/**
+	 * Cette fonction permet le traçage de l'Ecart Lateral
+	 * @param canvas
+	 */
+	protected void TraitChrono(Canvas canvas,int iPx,int iPy,int iRayon,
+			int iTextWidth,int iLongTrai) {
+		// Definition de la longueur d'amplitude d'affichage
+		int iLongEcartLateral=(iRayon-iLongTrai-iTextWidth)*2;
+		// Definition de l'amplitude
+		float fAmplitudeChrono =Math.abs(fChronoMini)+fChronoMaxi;
+		float fCoefEchelle =iLongEcartLateral/fAmplitudeChrono;
+
+		// boucle des traits de bas du chrono
+		int iCompteur=1;
+		float fPivotY=iPy+(5*fCoefEchelle);
+		while (fPivotY<iPy+iRayon-2*iLongTrai-iTextWidth) 
+		{
+			if (iCompteur%2!=0)
+			{
+				// trait court
+				canvas.drawLine(iPx+6, fPivotY, iPx-6, fPivotY, BousoleEcritPaint);
+			}
+			else
+			{
+				// trait long
+				canvas.drawLine(iPx+12, fPivotY, iPx-12, fPivotY, BousoleEcritPaint);
+			}
+			iCompteur++;
+			fPivotY= (fPivotY+(5*fCoefEchelle));
+		}
+		// boucle des traits de haut de l'ecart lateral
+		iCompteur = 1;
+		fPivotY=iPy-(5*fCoefEchelle);
+		while (fPivotY>iPy-iRayon+2*iLongTrai+iTextWidth) 
+		{
+			if (iCompteur%2!=0)
+			{
+				// trait court
+				canvas.drawLine(iPx+6, fPivotY, iPx-6, fPivotY, BousoleEcritPaint);
+			}
+			else
+			{
+				// trait long
+				canvas.drawLine(iPx+12, fPivotY, iPx-12, fPivotY, BousoleEcritPaint);
+			}
+			iCompteur++;
+			fPivotY= (fPivotY-(5*fCoefEchelle));
+		}
+		// trait des 2 seconde
+		fPivotY=iPy-(2*fCoefEchelle);
+		canvas.drawLine(iPx+20, fPivotY, iPx-20, fPivotY, Chrono2SecondePaint);
+		fPivotY=iPy+(2*fCoefEchelle);
+		canvas.drawLine(iPx+20, fPivotY, iPx-20, fPivotY, Chrono2SecondePaint);
+		// Trait ChronoPaint 
+		canvas.drawLine( 
+				//			(float) ((iPx+Math.sqrt(Math.pow(iRayon, 2)-Math.pow(fChrono*fCoefEchelle,2)))-2*iLongTrai-iTextWidth),
+				(float) ((iPx+Math.sqrt(Math.pow(iRayon-iLongTrai-iTextWidth, 2)-Math.pow(fChrono*fCoefEchelle,2)))),
+				iPy-fChrono*fCoefEchelle, 
+				(float) ((iPx-Math.sqrt(Math.pow(iRayon-iLongTrai-iTextWidth, 2)-Math.pow(fChrono*fCoefEchelle,2)))),
+				iPy-fChrono*fCoefEchelle,ChronoPaint );
+	}
+	/**
+	 * Cette fonction permet le traçage de l'Ecart Lateral
+	 * @param canvas
+	 */
+	protected void BagueRoute(Canvas canvas,int iPx,int iPy,int iRayon,
+			int iTextHauteur) {
+		canvas.save();
+
+		canvas.rotate(-fRoute, iPx, iPy);
+		int cardinalX = iPx;//-iTextWidth/2;
+		int cardinalY = iPy-iRayon;//textPaint.measureText
+
+		// Affiche une marque tous les 15 degrés et le texte tous les 45 degrés.
+		for (int i = 0; i < 24; i++) {
+			if (i%2!=0)
+			{
+				// Trait de la bague
+				canvas.drawLine(iPx, iPy-iRayon, iPx, iPy-iRayon+iTextHauteur/2, BousoleEcritPaint);
+
+			}
+			else
+			{
+				canvas.save();
+				canvas.translate(0, HauteurText);
+				String dirString = String.valueOf(i*15);
+						//MeasureText => Largeur Text
+				cardinalX = iPx-(int)BousoleEcritPaint.measureText(String.valueOf(i*15))/2;
+
+				canvas.drawText(dirString, cardinalX, cardinalY, BousoleEcritPaint);
+				canvas.restore();
+			}
+			canvas.rotate(15, iPx, iPy);
+		}
+		canvas.restore();
+	}
+}
