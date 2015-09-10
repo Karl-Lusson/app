@@ -5,7 +5,7 @@ package fr.lusson.bousole.vue;
 
 
 
-import com.example.fr.lusson.vol.R;
+import fr.lusson.vol.R;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;

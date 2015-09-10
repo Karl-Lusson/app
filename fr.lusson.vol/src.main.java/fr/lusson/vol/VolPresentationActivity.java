@@ -1,4 +1,6 @@
-package com.example.fr.lusson.vol;
+package fr.lusson.vol;
+
+import fr.lusson.vol.R;
 
 import fr.lusson.bousole.vue.BousoleView;
 import android.app.Activity;
