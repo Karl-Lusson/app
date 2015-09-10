@@ -28,3 +28,6 @@ proguard/
 
 # build target for maven
 target/
+
+# temporary file
+*~
