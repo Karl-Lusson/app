@@ -13,13 +13,13 @@
         $ tar -cvjf android-sdk_r24.3.4-linux.tgz 
         </code>  
     Editer votre `.bashrc` pour y ajouter les instructions suivantes :  
-    <code>
-        export ANDROID_HOME="~/Android/android-sdk-linux"  
-        # set PATH so it includes android/tools if it exists  
-        if [ -d "$ANDROID_HOME/tools" ] ; then  
-           PATH="$ANDROID_HOME/tools:$PATH"  
-        fi
-     </code>
+    
+    >   export ANDROID_HOME="~/Android/android-sdk-linux"  
+    >  # set PATH so it includes android/tools if it exists  
+    >   if [ -d "$ANDROID_HOME/tools" ] ; then  
+    >      PATH="$ANDROID_HOME/tools:$PATH"  
+    >   fi
+
      
 2. Récupérer les versions du SDK qui nous intéresse.
     1. nous avons besoin des API 16, 17, 18
