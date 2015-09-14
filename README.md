@@ -121,6 +121,7 @@ Voir [Le Guide définitif de Maven](http://maven-guide-fr.erwan-alliaume.com/mav
     </code>
     1. Installation dans votre dépôt local des dépendances nécessaires pour les API 16,17,18 soit les version d'Android 4.1, 4.2 et 4.3  
     <code>
+    $ cd maven-android-sdk-deployer  
     $ mvn clean install -P 4.1,4.2,4.3
     </code>
     
